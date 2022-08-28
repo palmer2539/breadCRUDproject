@@ -1,5 +1,6 @@
 //dependencies
 const express = require('express');
+const React = require('react');
 
 //config
 require('dotenv').config();
@@ -24,7 +25,7 @@ app.use('/breads', breadsController)
 
 //404 page
 app.get('*', (req, res) => {
-  res.send('404 Error')
+  res.render('../views/error404');
 })
 
 //listen

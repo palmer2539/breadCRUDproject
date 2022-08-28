@@ -21,14 +21,8 @@ breads.get('/:arrayIndex', (req, res) => {
       bread:Bread[req.params.arrayIndex]
     });
   } else {
-    res.send('404 Error');
+    res.render('../views/error404');
   };
 });
-
-
-
-
-
-
 
 module.exports = breads
