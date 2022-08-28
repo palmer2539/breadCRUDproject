@@ -15,7 +15,7 @@ function Show({bread}) {
         }
         have gluten.
       </p>
-      <img style={{width:300+'px', height:300+'px'}} src={bread.image} alt={bread.name} />
+      <img className='breadPics' src={bread.image} alt={bread.name} />
     </Default>
   );
 };

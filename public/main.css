@@ -1,0 +1,11 @@
+body {
+  background-color: floralwhite;
+}
+
+.breadPics {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  margin: auto;
+}

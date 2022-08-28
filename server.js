@@ -10,17 +10,22 @@ const app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
+app.use(express.static('public'));
 
 //routes
 app.get('/', (req, res) => {
   res.send(`<h1>Welcome to information on Breads!</h1>
   <a href="/breads">Breads</a>`)
-
 })
 
 //breads
 const breadsController = require('./controllers/breads_controller.js')
 app.use('/breads', breadsController)
+
+//404 page
+app.get('*', (req, res) => {
+  res.send('404 Error')
+})
 
 //listen
 app.listen(PORT, () => {

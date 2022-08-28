@@ -5,6 +5,7 @@ function Default(html) {
     <html>
       <head>
         <title>{html.title || 'Default'}</title>
+        <link rel="stylesheet" href="/main.css"/>
       </head>
       <body>
         <div className="wrapper">
@@ -26,4 +27,4 @@ function Default(html) {
 }
 
 
-module.exports = Default
+module.exports = Default;
