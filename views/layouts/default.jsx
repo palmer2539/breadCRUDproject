@@ -7,7 +7,16 @@ function Default(html) {
         <title>{html.title || 'Default'}</title>
       </head>
       <body>
-        <h1>HTML Rendered!</h1>
+        <div className="wrapper">
+          <header>
+            <span>
+              <a href="/">Home</a>
+            </span>
+            <span>
+              <a href="/breads">Breads</a>
+            </span>
+          </header>
+        </div>
         <div className="container">
           {html.children}
         </div>
